@@ -1,3 +1,155 @@
+$small-font: 0.6em;
+$light-gray: #b9b9b9;
+
 body {
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+
   background-color: #232323;
+}
+
+.background-image {
+  position: absolute;
+  z-index: -10;
+
+  width: 100%;
+  height: 100vh;
+
+  object-fit: cover;
+}
+
+nav {
+  display: flex;
+  justify-content: end;
+  padding: 10px;
+}
+
+form {
+  text-align: center;
+}
+
+.temperature-container {
+  margin-top: 50px;
+
+  font-size: 1.9em;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+h1 {
+  margin: 0 auto;
+
+  font-size: 2em;
+}
+
+.input-city {
+  height: 30px;
+  width: 160px;
+  padding: 1px 15px;
+
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+
+  background-color: rgba(0,0,0,0);
+  border-radius: 50px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: $light-gray;
+
+  transition: box-shadow 0.3s, background 0.3s;
+}
+
+.input-city:focus {
+  color: black;
+
+  background: white;
+  border: 0;
+  box-shadow: 0 0 8px white;
+
+  outline: 0;
+}
+
+.input-container {
+  position: relative;
+
+  width: 200px;
+
+  text-align: end;
+}
+
+input[type="text"]:invalid {
+  border: 2px solid red;
+  box-shadow: 0px 0px 8px red;
+}
+
+input[type="text"]:valid {
+  border-width: 2px;
+  border-style: solid;
+  border-color: $light-gray;
+}
+
+button[type="submit"] {
+  position: absolute;
+  right: 15px;
+
+  height: 100%;
+
+  background: 0;
+  border: 0;
+}
+
+svg {
+  transition: fill 0.3s;
+  fill: $light-gray;
+}
+
+.temperature-more-container {
+  display: flex;
+  justify-content: space-around;
+  width: 350px;
+  margin: 0 auto;
+
+  font-size: $small-font;
+}
+
+.temperature-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: $small-font;
+}
+
+.temperature-icon,
+.forecast-condition {
+  width: 60px;
+  height: 60px;
+}
+
+.forecast-grid-container {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  border-top: 2px solid $light-gray;
+  border-bottom: 2px solid $light-gray;
+}
+
+.forecast-grid-item { 
+  text-align: center; 
+}
+
+.gif-container { 
+  text-align: center; 
+}
+
+.gif-condition { 
+  width: 300px; 
+}
+
+button[type="submit"] svg:hover { 
+  fill: black; 
 }
