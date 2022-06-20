@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
   entry: './src/index.js',
   devtool: 'inline-source-map',
   devServer: {
@@ -14,13 +14,12 @@ module.exports = {
       title: 'Weather App',
       template: './src/index.html'
     }),
-    new Dotenv({
-      safe: true,
-    }),
+    new Dotenv(),
   ],
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: 'images/[hash][ext][query]',
     clean: true,
   },
   module: {
@@ -42,9 +41,20 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
+            presets: ['@babel/preset-env'],
+            plugins: ['@babel/plugin-transform-runtime']
           }
         }
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+        // use: [{
+        //   loader: 'url-loader',
+        //   options: { 
+        //       name: 'images/[hash]-[name].[ext]'
+        //   } 
+        // }]
       },
     ],
   },
