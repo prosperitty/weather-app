@@ -4,9 +4,86 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather App</title>
-<script defer src="main.bundle.js"></script></head>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap" rel="stylesheet"> 
+  <title></title>
+<script defer src="main.bundle.js"></script><script defer src="main.bundle.js"></script></head>
 <body>
-  
+  <div>
+    <img class="background-image" src="" alt="">
+  </div>
+  <nav>
+    <form action="">
+      <div class="input-container">
+        <input class="input-city" for="city" type="text" placeholder="Enter a city" pattern="^[a-zA-Z\s]+$">
+        <button type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+          </svg>
+        </button>
+      </div>
+    </form>
+  </nav>
+
+  <main>
+    <section>
+      <div class="temperature-container">
+        <p class="temperature-city">City</p>
+        <h1>
+          <span class="temperature-current">-</span><span>&#176;</span>
+        </h1>
+        <p class="temperature-description">
+          <img class="temperature-icon">
+          <span class="temperature-condition"></span>
+        </p>
+        <div class="temperature-more-container">
+          <p class="temperature-more">
+            <span>High:</span>
+            <span class="temperature-high">-</span><span>&#176;</span>
+          </p>
+          <p class="temperature-more">
+            <span>Low:</span>
+            <span class="temperature-low">-</span><span>&#176;</span>
+          </p>
+        </div>
+        <div class="temperature-more-container">
+          <p class="temperature-more">
+            <span>Feels Like:</span>
+            <span class="temperature-feels-like">-</span><span>&#176;</span>
+          </p>
+          <p class="temperature-more">
+            <span>humidity:</span>
+            <span class="temperature-humidity">-</span><span>&#37;</span>
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="forecast-grid-container">
+      <div class="forecast-grid-item">
+        <p class="forecast-time">-</p>
+        <img class="forecast-condition" src="" alt="">
+        <p><span class="forecast-temperature">-</span><span>&#176;</span></p>
+      </div>
+      <div class="forecast-grid-item">
+        <p class="forecast-time">-</p>
+        <img class="forecast-condition" src="" alt="">
+        <p><span class="forecast-temperature">-</span><span>&#176;</span></p>
+      </div>
+      <div class="forecast-grid-item">
+        <p class="forecast-time">-</p>
+        <img class="forecast-condition" src="" alt="">
+        <p><span class="forecast-temperature">-</span><span>&#176;</span></p>
+      </div>
+      <div class="forecast-grid-item">
+        <p class="forecast-time">-</p>
+        <img class="forecast-condition" src="" alt="">
+        <p><span class="forecast-temperature">-</span><span>&#176;</span></p>
+      </div>
+    </section>
+    <section>
+      <div class="gif-container">
+        <img class ="gif-condition" src="" alt="">
+      </div>
+    </section>
+  </main>
 </body>
 </html>
