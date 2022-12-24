@@ -32,7 +32,7 @@ cityInput.addEventListener('input', () => {
 async function getCurrentWeather(city) {
   try {
     const res = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${weatherAPI}`,
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${weatherAPI}`,
       { mode: 'cors' }
     );
     const currentData = await res.json();
@@ -45,7 +45,7 @@ async function getCurrentWeather(city) {
 async function getForecast(city) {
   try {
     const res = await fetch(
-      `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&cnt=4&appid=${weatherAPI}`,
+      `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&cnt=4&appid=${weatherAPI}`,
       { mode: 'cors' }
     );
     const forecastData = await res.json();
@@ -189,12 +189,12 @@ function displayHumidity(percentage) {
 
 function displayWeatherIcon(id) {
   const weatherIcon = document.querySelector('.temperature-icon');
-  weatherIcon.src = `http://openweathermap.org/img/wn/${id}@2x.png`;
+  weatherIcon.src = `https://openweathermap.org/img/wn/${id}@2x.png`;
 }
 
 function displayForecastIcons(index, id) {
   const forecastIcons = document.querySelectorAll('.forecast-condition');
-  forecastIcons[index].src = `http://openweathermap.org/img/wn/${id}@2x.png`;
+  forecastIcons[index].src = `https://openweathermap.org/img/wn/${id}@2x.png`;
 }
 
 function displayForecastTemperature(index, temperature) {
