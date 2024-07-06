@@ -29,4 +29,4 @@ A basic weather app which displays the current weather and 3 hourly forecast.
 
 [The Odin Project](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/weather-app)
 
-[Live Demo](https://alex-lvl.github.io/weather-app/)
+[Live Demo](https://prosperitty.github.io/weather-app/)
